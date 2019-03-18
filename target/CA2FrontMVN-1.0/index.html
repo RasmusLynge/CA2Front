@@ -1,0 +1,65 @@
+<!--
+Start Code For the Exercise JavaScript, DOM, JSON, AJAX and JPA
+-->
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>CA2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- CDN Polyfills which should allow you to use fetch (and promises) from IE and older browsers -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    </head>
+
+    <body class="container">
+        <H2>Find Personer</h2>
+        <br>
+        <input type="text" id="search" style="width: 10%" placeholder="søg"></input>
+        <button class="btn btn-default" id="btnfind"> Find personer </button>
+        <button class="btn btn-default" id="btnzip"> Find danske postnumre </button>
+        <button class="btn btn-default" id="btncity"> Find personer fra et postnummer </button>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+
+                <table id="tbl" class="table">
+
+                    <!-- >TODO: Dynamically create the rows with data fetched from the API, and insert into the table here -->
+                </table>
+            </div>
+            <div class="col-md-6">
+
+                <h4>Opret bruger:</h4>
+                <!-- TODO: Create the necessary SQL-script to insert all data fetched from the API, into a table with matching colums -->
+                <form>
+                    <input type="text" id="fname" style="width: 60%" placeholder="Fornavn" required></input>
+                    <input type="text" id="lname" style="width: 60%" placeholder="Efternavn" required></input>
+                    <input type="email" id="email" style="width: 60%" placeholder="Email" required></input>
+                    <br>
+                    <p>Adresse:</p>
+                    <input type="text" id="address" style="width: 60%" placeholder="Adresse" required></input>
+                    <input type="text" id="addressdesc" style="width: 60%" placeholder="Adresse beskrivelse" required></input>
+                    <input type="text" id="zip" style="width: 60%" placeholder="Postnummer" required></input>
+                    <br>
+                    <p>Nummer:</p>
+                    <input type="number" id="phone" style="width: 60%" placeholder="Nummer?" required></input>
+                    <input type="text" id="phonedesc" style="width: 60%" placeholder="nummer beskrivelse" required></input>
+                    <p>Hobby:</p>
+                    <input type="text" id="hobby" style="width: 60%" placeholder="Hobby" required></input>
+                    <input type="text" id="hobbydesc" style="width: 60%" placeholder="Hobby beskrivelse" required></input>
+                    <br>
+                <button class="btn btn-default" id="btnMakePerson"> Opret </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
