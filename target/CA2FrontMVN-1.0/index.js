@@ -12,9 +12,9 @@ var urlPost = "http://localhost:8084/CA2Final/api/person/";
 const deployed = true;
 
 if (deployed == true) {
-    var urlHobby = "http://localhost:8084/CA2Final/api/person/hobby/";
-    var urlZip = "http://localhost:8084/CA2Final/api/person/city/";
-    var urlPost = "http://localhost:8084/CA2Final/api/person/";
+    var urlHobby = "https://matbk.com/CA2Final/api/person/hobby/";
+    var urlZip = "https://matbk.com/CA2Final/api/person/city/";
+    var urlPost = "https://matbk.com/CA2Final/api/person/";
 }
 
 btnFindPersons.onclick = () => {
@@ -43,7 +43,7 @@ btnFindPersons.onclick = () => {
 
 btnZip.onclick = () => {
     table.innerHTML = "<h4> Vent venligst </h4>"
-    fetch("http://localhost:8084/CA2Final/api/person/zip")
+    fetch("https://matbk.com/CA2Final/api/person/zip")
             .then(res => res.json())
             .then((data) => {
                 let mapData = data.map(function (element) {
